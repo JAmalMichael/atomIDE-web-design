@@ -23,6 +23,13 @@ a {
   align-items: center;
 }
 
+@media screen and (max-width: 1024px) {
+
+  .before_header{
+  }
+  
+}
+
 .before_headerList {
   display: flex;
   justify-content: flex-start;
@@ -246,6 +253,14 @@ a {
   width: 196px;
 }
 
+@media screen and (max-width: 1024px) {
+  .hero-header {
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+  }
+}
+
 .circle {
   position: absolute;
   top: 0;
@@ -332,6 +347,17 @@ a {
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 4rem;
   margin-top: 10rem;
+  background-image: url(images/index-teletype-graphic.svg);
+  background-repeat: no-repeat;
+  background-position: calc(50% - 1140px);
+}
+
+@media screen and (max-width: 1024px) {
+  .editor1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .editor1-text {
@@ -401,6 +427,13 @@ a {
   background: rgba(0, 0, 0, 0)
 }
 
+@media screen and (max-width: 1024px) {
+   .overlay {
+    width: 780px;
+    height: 488px;
+   }
+}
+
 .editor1-text-button {
     display: block;
     cursor: pointer;
@@ -424,10 +457,13 @@ a {
   height: 100vh;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 4rem;
   margin-top: 10rem;
   position: relative;
+  background-image: url(images/index-github-graphic.svg);
+  background-repeat: no-repeat;
+  background-position: calc(50% + 550px);
 }
 
 .editor2-text {
@@ -479,12 +515,14 @@ a {
 .editor2-image2-container {
   position: relative;
 }
+
 .editor2-image2 {
   width: 780px;
   height: 488px;
   border-radius: 10px;
   margin-left: -20px;
 }
+
 
 .overlay2 {
   position: absolute;
@@ -519,6 +557,35 @@ a {
   background: rgb(69, 237, 198)
 }
 
+@media screen and (max-width: 1161px) {
+  .editor2-text {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .editor2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .editor2-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .overlay2 {
+    width: 780px;
+    height: 488px;
+  }
+
+  .editor2-image2 {
+    margin-left: 0;
+  }
+  
+}
+
 /* EDITOR3 */
 
 .editor3 {
@@ -529,6 +596,7 @@ a {
   flex-direction: column;
   position: relative;
 }
+
 
 .editor3 h1 {
   color: rgb(239, 218, 185);
@@ -557,10 +625,24 @@ a {
   margin-bottom: 0.5rem;
 }
 
+
 .editor3-list1 li {
   color: rgb(239, 218, 185);
   font-size: 16px;
   font-weight: 300;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .editor3-list1{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .editor3-list-container {
+    width: 100%;
+    height: 444px;
+  }
 }
 
 
@@ -619,6 +701,19 @@ a {
 .editor4-list1 p a:hover {
   color: rgb(235, 172, 0);
 
+}
+
+@media screen and (max-width: 1024px) {
+
+  .editor4-list1 li p{
+    font-size: 16px / 1.5 normal normal;
+  }
+  
+  .editor4-list1{
+    display: flex;
+    flex-direction: column;
+    width: 560px;
+  }
 }
 
 
