@@ -5,7 +5,9 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif,
+               "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  width: 100vw;
 }
 
 a {
@@ -23,12 +25,7 @@ a {
   align-items: center;
 }
 
-@media screen and (max-width: 1024px) {
 
-  .before_header{
-  }
-  
-}
 
 .before_headerList {
   display: flex;
@@ -41,7 +38,24 @@ a {
 .before_headerList li {
   color: #efeae1;
   margin-left: 1rem;
-  transition: all 1s ease-in;
+  transition: color 1s ease-in-out;
+}
+
+@media screen and (max-width: 1024px) {
+
+  .before_header{
+      align-items: center;
+      font-weight: 700;
+  }
+
+  .before_headerList {
+    margin-left: 5rem;
+  }
+
+  .before_headerList li {
+    margin-left: 0.8rem;
+  }
+  
 }
 
 .before_headerList li:hover {
@@ -103,22 +117,22 @@ a {
 
 .hero {
   height: 100vh;
-  width: inherit;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
+.hero-header {
+  width: 60rem;
+  height: 30rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  transform: translateX(-20px);
 }
+
+
 
 .octonaut {
   position: absolute;
@@ -128,13 +142,12 @@ a {
   animation: bounce 5s ease-in-out infinite;
 }
 
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
   }
-  100% {
-    transform: rotate(360deg);
+  50% {
+    transform: translateY(-20px);
   }
 }
 
@@ -170,13 +183,13 @@ a {
   animation: rotate 140s linear infinite;
 }
 
-.hero-header {
-  width: 60rem;
-  height: 30rem;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  transform: translateX(-20px);
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .hero-header-item {
@@ -188,6 +201,8 @@ a {
   margin-top: 3rem;
   z-index: 1;
 }
+
+
 
 .hero-header-list li{
   color: #efeae1;
@@ -253,13 +268,6 @@ a {
   width: 196px;
 }
 
-@media screen and (max-width: 1024px) {
-  .hero-header {
-    width: 100vw;
-    height: 100vh;
-    flex-direction: column;
-  }
-}
 
 .circle {
   position: absolute;
@@ -281,6 +289,7 @@ a {
   flex-direction: column;
 }
 
+
 .hero-footer1 {
   font-size: 12.8px;
   color: rgb(120, 111, 99);
@@ -295,6 +304,52 @@ a {
   color: rgb(235, 172, 0);
   cursor: pointer;
   transition: all 1s ease-in;;
+}
+
+@media screen and (max-width: 1024px) {
+
+  .hero {
+    height: fit-content;
+  }
+
+  .hero-header {  
+    transform: translateX(0);
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column; 
+  }
+
+  .octonaut {
+    left: 10rem;
+  }
+
+  .hero-header-item {
+    transform: translateX(25rem);
+    margin-top: 35rem;
+  }
+
+  .circle {
+    top: 3rem;
+    left: 10rem;
+  }
+
+  .center-image {
+    top: 3rem;
+    left: 28rem;
+    position: absolute;
+  }
+
+  .hero-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .hero-footer {
+    margin-top: 7rem;
+  }
+
 }
 
 .hero-footer2 {
@@ -333,6 +388,13 @@ a {
   color: rgb(239, 218, 185);
 }
 
+@media screen and (max-width: 1024px) {
+  .hero-footer3 {
+    font-size: 45px;
+    font-weight: 200;
+  }
+}
+
 .hero-footer3-inner {
   color: rgb(120, 176, 160);
 }
@@ -357,7 +419,19 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 1rem auto 10rem auto;
+    width: 80%;
+    height: 100%;
+    background-position: calc(50% - 800px);
   }
+
+  .editor1-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+  }
+
 }
 
 .editor1-text {
@@ -523,6 +597,22 @@ a {
   margin-left: -20px;
 }
 
+@media screen and (max-width: 1024px) {
+  .editor2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem auto 1rem auto;
+    width: 80%;
+    height: 100%;
+  }
+
+  .editor2-text {
+    width: fit-content;
+  }
+
+}
+
 
 .overlay2 {
   position: absolute;
@@ -555,12 +645,6 @@ a {
 
 .editor2-text-button:hover {
   background: rgb(69, 237, 198)
-}
-
-@media screen and (max-width: 1161px) {
-  .editor2-text {
-    width: 250px;
-  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -634,9 +718,23 @@ a {
 
 
 @media screen and (max-width: 1024px) {
+  .editor3 {
+    height: 100vh;
+    margin-bottom: 7rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .editor3 h1 {
+    margin-bottom: 2rem;
+  }
+
   .editor3-list1{
     display: flex;
     flex-direction: column;
+    gap: 3rem;
   }
 
   .editor3-list-container {
@@ -664,7 +762,7 @@ a {
   margin-bottom: 4rem;
 }
 .editor4-list-container {
-  width: 860px;
+  width: inherit;
   height: 444px;
 }
 
@@ -704,6 +802,23 @@ a {
 }
 
 @media screen and (max-width: 1024px) {
+
+  .editor4 {
+    margin: 5rem auto 5rem auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .editor4 h1 {
+    margin-bottom: 2rem;
+  }
+
+  .editor4-list1{
+    grid-row-gap: 50px;
+  }
 
   .editor4-list1 li p{
     font-size: 16px / 1.5 normal normal;
@@ -790,6 +905,29 @@ a {
 
 .contact-item2-list li a:hover {
   color: rgb(235, 172, 0);
+}
+
+@media screen and (max-width: 1024px) {
+
+  .contact-container {
+    width: 50%;
+    margin: 2rem auto 2rem auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-item1 h3, .contact-item2 h3 {
+    margin-bottom: 2rem;
+  }
+  
+  .contact-item1 p {
+      margin-bottom: 3rem;
+  }
+
+  .contact-item1-link {
+    margin-bottom: 2rem;
+  }
+ 
 }
 
 
